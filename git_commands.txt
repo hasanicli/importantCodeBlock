@@ -1,0 +1,100 @@
+pwd print working directory-bulunduğumuz klasör
+cd Desktop/
+cd myFile/
+clear satırları temizler
+git config --list
+git config --global user.name "hasanicli"
+
+
+git config --global --replace-all user.name "halitmusa"
+git config --global --replace-all user.email "iclimusa56@gmail.com"
+
+git config --global --replace-all user.name "hasanicli"
+git config --global --replace-all user.email "iclihasan@gmail.com"
+
+git init yeni bir git projesi
+git status
+git add .  hepsini ekle
+git commit -m "starting file is sent"  --> local repository
+
+git add index.html
+
+git commit yaparsan açılan ekrana açıklama yaparız ve :x! ile kaydederrek çıkarız
+
+
+touch yeni.txt  yeni bir dosya oluşturur
+
+rm  dosyaismi dosyyaaı siler
+
+git add -A yapılan bütün değişiklikleri staging area ya gönderir
+
+ls -al  tüm dosyaları gösterir
+
+dosya ismi uzunsa dosya ismini tırnaklar içinde yaz
+
+mv eskidosyaisim yenidosyaismi  isim değiştirir 
+
+git status -s   short form
+
+git restore --staged index.html    Staging Area daki değiştirlen verileri geri döndürür(Stageden kurtarır)
+git restore index.html ilk haline geri döndürür
+
+commit yapılanları geri alma
+git show son yapılan commit işlemini gösterir
+git log tüm commit işlemlerini gösterir
+git log --oneline  daha sade gösterim
+git log -p -2 son iki değişikliği gösterir q ile çıkarsın
+git log --since=30minutes  30 dk içindeki değişiklikler 5hours, 3days, 2weeks
+git checkout index  index e geri dönecek burada index değişikliğin indexi logdan görebilirsin
+git checkout master komutu zamanda son noktaya geri getirir
+
+eğer zamanda bir noktanın değişikliğini iptal etmek istiyorsan
+1
+git revert logindex sadece bu kısımda yaptığın değişiklikleri iptal eder diğerlerine dokunmaz
+esc den sonra :x! kaydedip çıkış sağlar
+yaptığın iptalden de vazgeçmek isteyebilirsin yani reverti revert edebilirsin aynı şekilde
+2
+git reset --soft commitindex      logdan bulabilirsin burada stage alanına gelir commit yaparsan geçerli olur
+git reset --mixed commitindex      stage alaında önüne yani çalışma alanına taşır add ve commit yapman gerekir
+git reset --hard commitindex   çalışma alanıda dahil geri döndürür
+**********
+touch .gitignore  dosya oluştururuz ve bu dosya git taraıfından ignore edilir yani görmezden gelinir
+sonra ignore edilecek dosya ismini gitignore içine yazıp daha sonra güncelleme yaparsan ignore edilecek dosya
+içindeki değişiklikler artık algılanmaz ama gitignore ilk başta yazmak gerekiyor sonradan oluşturduğumuzda ise
+şu adımları izleyeceğiz
+1- git rm -r --cached .   -->izlemeyi kaldırır
+2- git add .              --> tüm izlenecek dosyaları yeniden ekleriz
+3- git commit -m "gitignore problem is soluted"
+
+klasör izlemmek için directory/
+uzantılı tüm doyaları izlememek için *.txt yi .gitignore içine yazmamız gerekiyor
+**********************
+branch
+
+git branch branchname
+git branch -a     -->all branches are shown.
+git checkout branchname    --> bu branşta çalışmaya başla  işi bittiginde add ve commit yap -b var gibi kontrol et
+git checkout anotherbranchname    --> bu branşta çalışmaya başla  işi bittiginde add ve commit yap
+git checkout master  --> ana branşa geri dön
+git merge branchname anotherbranchname  iki çalışmayı masterde birleştirdik
+çıkanekranda i(insert) e bas sonra esc sonra :x! kaydet çık
+
+***************
+git commit -am "Açıklama"  --> hem değişikliği kaydeder hem de commit yapar hata verebilir dosya eklemede çalışmıyor
+ancak verideğişikliklerinde çalışıyor 
+git push gönderir değişikliği
+
+git remote -v   adresleri gösteriyor
+
+git fetch web te olan değişikleri almaya yarıyor bu değişiklikleri almadan sana gönderim yapmaya müsade etmez
+ama bunu uygulamaz bunun için git merge komutuyla kayıt etmemiz gerek çıkan pencerede :wq yazarak merge işlemini yapıp
+çıkmamızı sağlıyoruz
+
+git pull = git fetch + git merge
+
+
+************
+branch ların yaptığı değişilikleri git push origin branchname komutuyla gönderiyoruz
+git branch -d branchname  oluşturduğumuz branşı siler
+
+
