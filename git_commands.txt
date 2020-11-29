@@ -1,10 +1,13 @@
-pwd print working directory-bulunduğumuz klasör
-cd Desktop/
-cd myFile/
+pwd	-->print working directory-bulunduğumuz klasöre gider
+cd Desktop/	-->masaüstüne gider
+cd myFile/	-->myFile Dosyasına gider
+cd ..	-->önceki dosyaya gider
 clear satırları temizler
+**********************************************************************
+
 git config --list
 git config --global user.name "hasanicli"
-
+git config --global user.name "iclihasan@gmail.com"
 
 git config --global --replace-all user.name "halitmusa"
 git config --global --replace-all user.email "iclimusa56@gmail.com"
