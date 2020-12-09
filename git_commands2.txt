@@ -1,0 +1,67 @@
+git --version	-->git versiyon numarasını verir.
+git config --list	-->git ayarlarını listeler.
+git config -l	-->git ayarlarını listeler.
+git config --global user.name "hasanicli"	-->kullanıcı adı tanımlıyoruz.
+git config --global user.email "iclihasan@gmail.com"	-->kullanıcı emaili tanımlıyoruz.
+git config --global user.name 	-->sadece username döndürür
+git config --global user.email	-->sadece usermail döndürür
+clear	-->sayfayı temizler
+
+git config user.name "Your Name Here"	-->lokal olarak kullanıcı adı tanımlıyoruz.
+git config user.email your@email.com	-->lokal olarak kullanıcı emaili tanımlıyoruz.
+
+pwd	-->print working directory
+ls	-->bütün alt dizinleri listeler (gizli dosyalar hariç)
+ls -a		-->gizli dosyalarla birlikte bütün alt dizinleri listeler
+ls --all	-->gizli dosyalarla birlikte bütün alt dizinleri listeler	
+mkdir "klasöradi" 	-->yeni bir klasör oluşturmak için kullanıyoruz.
+rmdir "klasöradi" 	-->klasör silmek için kullanıyoruz.
+rmdir -r "klasöradi" 	-->klasör silmek için kullanıyoruz. Klasör içinde dosyalar olsa bile siler.
+q	-->çıkış sağlamak için
+
+cd "dosyaadi"	-->dosya içine girer
+cd ..	-->bir alt dizen döner
+touch "dosyaadi.dosyauzantisi"	-->dosya oluşturur.
+
+vi "dosyaadi.dosyauzantisi"	-->dosyaya yazmak için vi editörünü açar
+vi editörüne yazmak için i(insert) harfine basarız. daha sonra değişiklikleri işlemek için önce esc tuşuna basarız
+daha sonra :wq yazar ve entere basarız. wq(write-quit)
+
+rm "dosyaadi.dosyauzantisi"	-->dosya silme işlemi yapar.
+rm -r "klasöradi"	--klasör silme işlemi yapar. klasör içinde dosalar olsa bile
+
+git init	-->klasörümüzü git klasörü haline getirir.
+
+git add dosya.abc 	-->dosyayı staging area içine gönderir.
+git add . 	--> tüm dosyaları staging area içine gönderir.
+git commit -m "mesaj"	-->dosyayı commit eder yani indexler tarih verir vb
+git push
+
+git rm --cached dosya.abc 	-->track ettiğimiz yani staging area içine gönderdiğimiz dosyayı tekrar 
+untrack etmek için kullanılır yani git ile ilişkisiz hale getirilir.
+
+git log 	-->commit listesini verir
+git log --oneline	-->commit listesini isimler olarak verir
+
+git reset id -- hard 	-->bu komutla id ile belirtiğimiz log a kesin dönüş yapıyoruz.
+git reset id -- soft	-->bu komutla id ile belirtiğimiz log a yumuşak dönüş yapıyoruz. yani dosyalar staging area
+içine taşınıyor
+
+git revert id	-->bu komutla id ile belirtiğimiz logta değişiklik yapmak için dönüyoruz. 
+dosya oluşmuşsa siler. yazı yazdıydan siler
+git commit --amend -m "yeni mesaj" 	-->commit mesajını değiştirir.
+git commit --amend 	-->stagin areadaki unutulan bir dosyayı da bu commit içine ekler
+
+------------------
+git branch dal1 		-->Dal oluşturur
+git branch -a 			-->Dalları listeler
+git checkout dal1		-->Dala geçiş yapar
+git checkout -b feature1	-->Kısayoldan dal oluşturup geçiş yapar
+git branch -d dal1		-->Dal merge edilmişse siler.	
+git branch -D dal1		-->Dal merge edilmese bile siler.
+git merge feature1		-->Feature1'de yapılanları master'a merge eder.	
+
+-------------------------------
+git push adres(githubta oluşturduğumuz) master(diğer branclerde olabilir)
+git remote add origin link -->bu komut yukarıdaki adresi .git içini kaydeder süreklü adres yazmak zorunda kalmazsın
+git push origin master
